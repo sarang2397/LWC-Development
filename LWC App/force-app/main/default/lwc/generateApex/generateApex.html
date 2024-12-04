@@ -1,0 +1,21 @@
+<template>
+   
+    <div class="c-container">
+        <lightning-button label="Clear" variant="brand" onclick={handleRemove} style="slds-float_right"></lightning-button>
+        <lightning-layout vertical-align="center" class="x-large">
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <lightning-textarea name="input1" label="Enter JSON" onchange={handleJsonChange}></lightning-textarea>
+            </lightning-layout-item>
+            
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <lightning-textarea name="input1" label="Generated Apex" value={convertedValue}></lightning-textarea>
+            </lightning-layout-item>
+          
+        </lightning-layout>
+        <div >
+            <center>
+            <lightning-button variant="brand" label="Convert" onclick={handleConvert}></lightning-button>
+        </center>
+        </div>
+    </div>
+    </template>
